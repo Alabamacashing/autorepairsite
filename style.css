@@ -320,8 +320,8 @@ h1 em, h2 em { color: var(--accent); font-family: var(--serif); font-weight: 400
   .menu-toggle span { width: 16px; height: 1px; background: currentColor; transition: transform .2s ease; }
   .menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(3.5px) rotate(45deg); }
   .menu-toggle[aria-expanded="true"] span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
-  .main-nav { position: absolute; top: 100%; right: 0; left: 0; z-index: 20; display: grid; grid-template-rows: 0fr; border: 0; background: var(--paper); transition: grid-template-rows .3s ease, box-shadow .3s ease; }
-  .main-nav.is-open { grid-template-rows: 1fr; box-shadow: 0 15px 25px rgba(0,0,0,.12); }
+  .main-nav { position: absolute; top: 100%; right: 0; left: 0; z-index: 20; display: grid; grid-template-rows: 0fr; visibility: hidden; border: 0; background: var(--paper); pointer-events: none; transition: grid-template-rows .3s ease, box-shadow .3s ease, visibility 0s linear .3s; }
+  .main-nav.is-open { grid-template-rows: 1fr; visibility: visible; box-shadow: 0 15px 25px rgba(0,0,0,.12); pointer-events: auto; transition-delay: 0s; }
   .main-nav__inner { min-height: 0; overflow: hidden; display: block; }
   .nav-links { display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 8px 0; }
   .nav-links a { padding: 12px 3px; border-bottom: 1px solid var(--line); font-size: 12px; }
